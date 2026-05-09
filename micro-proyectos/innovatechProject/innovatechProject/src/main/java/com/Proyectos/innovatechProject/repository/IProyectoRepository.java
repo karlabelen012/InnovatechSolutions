@@ -1,4 +1,4 @@
-package com.Proyectos.innovatechProject.model.repository;
+package com.Proyectos.innovatechProject.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
