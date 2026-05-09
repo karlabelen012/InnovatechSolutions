@@ -1,0 +1,54 @@
+import React, { useEffect, useState } from 'react';
+import { fetchDashboardData } from '../services/api';
+
+const Dashboard = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchDashboardData().then(res => setData(res));
+    }, []);
+
+    if (!data) return <div className="loader">Cargando Sistema Innovatech...</div>;
+
+    return (
+        <div className="container">
+            <header>
+                <h1>🚀 Innovatech Solutions - Panel Central</h1>
+            </header>
+
+            <div className="grid">
+                {/* Columna Proyectos */}
+                <div className="card">
+                    <h2>📁 Proyectos (8081)</h2>
+                    {data.proyectos?.map(p => (
+                        <div key={p.id} className="item">
+                            <strong>{p.nombre}</strong> - <span>{p.estado}</span>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Columna Recursos */}
+                <div className="card">
+                    <h2>🔧 Recursos (8082)</h2>
+                    {data.recursos?.map(r => (
+                        <div key={r.id} className="item">
+                            <strong>{r.nombreRecurso}</strong>: {r.cantidad} unidades
+                        </div>
+                    ))}
+                </div>
+
+                {/* Columna Analítica */}
+                <div className="card">
+                    <h2>📊 Analítica (8083)</h2>
+                    {data.analitica?.map(a => (
+                        <div key={a.id} className="item kpi">
+                            <span>{a.kpiNombre}</span>: <strong>{a.kpiValor}</strong>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Dashboard;
