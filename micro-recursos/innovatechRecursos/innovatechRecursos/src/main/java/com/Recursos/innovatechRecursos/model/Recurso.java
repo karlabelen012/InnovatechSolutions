@@ -14,7 +14,7 @@ public class Recurso {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private String nombreRecurso; // Ej: "Servidor AWS", "Licencia Java"
-    private String tipo;          // Ej: "Hardware", "Software"
+    private String nombreRecurso; // Ej: "Servidor AWS", "Licencia Java" Nombre del recurso
+    private String tipo;          // Ej: "Hardware", "Software" Categoría del recurso
     private Integer cantidad;
 }
