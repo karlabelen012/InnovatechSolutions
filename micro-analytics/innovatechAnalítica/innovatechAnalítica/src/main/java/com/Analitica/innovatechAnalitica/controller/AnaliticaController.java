@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.Analitica.innovatechAnalitica.model.Analitica;
 import com.Analitica.innovatechAnalitica.service.AnaliticaService;
 
+/* Controlador REST para manejar las solicitudes relacionadas con la analítica */
 @RestController
 @RequestMapping("/api/analytics")
 @CrossOrigin(origins = "*") // Para que el Front pueda conectar sin problemas de CORS

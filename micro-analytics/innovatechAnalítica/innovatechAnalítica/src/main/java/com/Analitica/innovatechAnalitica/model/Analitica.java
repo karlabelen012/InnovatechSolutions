@@ -8,6 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+/* Entidad Analitica que representa un KPI o métrica de seguimiento en el sistema */
 @Entity
 @Data 
 public class Analitica {

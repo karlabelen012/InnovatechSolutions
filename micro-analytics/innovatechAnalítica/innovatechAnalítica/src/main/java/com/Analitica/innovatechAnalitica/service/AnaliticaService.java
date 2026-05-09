@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.Analitica.innovatechAnalitica.model.Analitica;
 import com.Analitica.innovatechAnalitica.repository.IAnaliticaRepository;
-
+/* Servicio para manejar la lógica de negocio relacionada con la analítica y los KPIs */
 @Service
 public class AnaliticaService {
 
