@@ -1,4 +1,4 @@
-package com.Proyectos.innovatechProject.model.service;
+package com.Proyectos.innovatechProject.service;
 
 
 import java.util.List;
@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.Proyectos.innovatechProject.model.Proyecto;
-import com.Proyectos.innovatechProject.model.repository.IProyectoRepository;
+import com.Proyectos.innovatechProject.repository.IProyectoRepository;
 
 @Service
 public class ProyectoService {
