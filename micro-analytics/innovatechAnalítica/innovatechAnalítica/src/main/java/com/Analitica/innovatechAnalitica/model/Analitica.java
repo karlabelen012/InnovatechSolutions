@@ -15,7 +15,7 @@ public class Analitica {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private String nombreKpi; // Ej: "Avance Global", "Rendimiento Equipo A"
-    private Double valorKpi;
-    private LocalDateTime fechaCreacion = LocalDateTime.now();
+    private String kpiNombre; 
+    private Double kpiValor;  
+    private LocalDateTime fechaRegistro = LocalDateTime.now();
 }

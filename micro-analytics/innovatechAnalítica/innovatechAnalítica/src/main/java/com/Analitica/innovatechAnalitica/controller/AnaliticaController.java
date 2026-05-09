@@ -15,7 +15,7 @@ import com.Analitica.innovatechAnalitica.service.AnaliticaService;
 
 @RestController
 @RequestMapping("/api/analytics")
-@CrossOrigin(origins = "*") // Para que el Front pueda conectar sin problemas de CORS
+@CrossOrigin(origins = "*") 
 public class AnaliticaController {
 
     @Autowired
@@ -23,11 +23,12 @@ public class AnaliticaController {
 
     @GetMapping("/listar")
     public List<Analitica> listar() {
-        return service.obtenerTodosLosKpis();
+        return service.obtenerKpis();
     }
 
     @PostMapping("/guardar")
     public Analitica guardar(@RequestBody Analitica kpi) {
+        // Opcional: Aquí podrías usar la Factory si quieres procesar algo antes
         return service.guardarKpi(kpi);
     }
 }

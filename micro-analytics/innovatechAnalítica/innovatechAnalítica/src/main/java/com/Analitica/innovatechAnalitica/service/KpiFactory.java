@@ -7,9 +7,10 @@ import com.Analitica.innovatechAnalitica.model.Analitica;
 public class KpiFactory {
     public static Analitica crearKpiEstandar(String nombre, Double valor) {
         Analitica kpi = new Analitica();
-        kpi.setNombreKpi(nombre);
-        kpi.setValorKpi(valor);
-        kpi.setFechaCreacion(LocalDateTime.now());
+        // CORRECCIÓN: Los nombres deben coincidir con el modelo
+        kpi.setKpiNombre(nombre); 
+        kpi.setKpiValor(valor);
+        kpi.setFechaRegistro(LocalDateTime.now());
         return kpi;
     }
 }

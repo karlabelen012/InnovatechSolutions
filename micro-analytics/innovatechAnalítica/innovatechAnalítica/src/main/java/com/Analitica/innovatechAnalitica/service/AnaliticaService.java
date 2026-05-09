@@ -14,7 +14,7 @@ public class AnaliticaService {
     @Autowired
     private IAnaliticaRepository repository;
 
-    public List<Analitica> obtenerTodosLosKpis() {
+    public List<Analitica> obtenerKpis() {
         return repository.findAll();
     }
 
